@@ -1,9 +1,6 @@
-# DataScience
+## DataScience - Formação Cientista de Dados com R e Python
 
-##### Formação Cientista de Dados com R e Python #####
-
-
-## Ferramentas Utilizadas:
+### Ferramentas Utilizadas:
 
 - R com RStudio (Notebooks)
 - Python com Juptyper Labs (Anaconda)
@@ -14,37 +11,36 @@
   - Tableau
 
 
-## Instalação de Pacotes
+### Instalação de Pacotes
 
 ```{r}
-#install.packages("cluster")
-#install.packages("factoextra")
+install.packages("cluster")
+install.packages("factoextra")
 library(cluster)
 library(factoextra)
 ```
-# Gera o cluster
+### Gera o cluster
 
 ```{r}
 cluster = pam(iris[,1:4],k=3)
 ```
-# Visualiza
+### Visualiza
 
 ```{r}
 cluster
 plot(cluster)
 table(iris$Species,cluster$clustering)
 ```
-# Vizualização com factoextra
+### Vizualização com factoextra
 
 ```{r}
-g = fviz_cluster(list(data = iris[,1:4], cluster=cluster$cluster), ellipse.type = "norm", ggtheme = theme_bw(),
-                main="Cluster")
+g = fviz_cluster(list(data = iris[,1:4], cluster=cluster$cluster), ellipse.type = "norm", ggtheme = theme_bw(), main="Cluster")
 plot(g)
 ```
 
-# Anaconda (JuptyperLab)
+### Anaconda (JuptyperLab)
 
 ```
-- pip install yellowbrick
-- pip install apyori
+pip install yellowbrick
+pip install apyori
 ```
