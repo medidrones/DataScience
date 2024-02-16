@@ -1,0 +1,10 @@
+---
+Formação Cientista de Dados - Jorge Medina
+Ajuda
+---
+
+```{r}
+help(sd)
+head(iris)
+```
+
